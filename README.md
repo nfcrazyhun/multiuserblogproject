@@ -104,6 +104,7 @@ And conditionally included form CDNs:
 - page where super admin can see and modify all users posts
 - comment section
 - messaging system between users
+- Build API endpoints with Laravel Sanctum
 
 ## Screenshots
 ![1-home-page-min](https://user-images.githubusercontent.com/47859399/148252688-796f2874-e1c2-4053-97b5-27f3fa45a72f.png)
