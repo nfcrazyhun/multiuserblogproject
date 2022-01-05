@@ -45,27 +45,27 @@ This web application made in:\
 ## Installation guide
 1. Open a terminal
 2. Clone this repository
-```  
+```
 git clone https://github.com/nfcrazyhun/multiuserblogproject.git
-```  
+```
 3. `cd` into it
 
 4. Install dependencies
-```  
-composer install  
-```  
+```
+composer install
+```
 5. (Optional) Install npm packages and build Webpack
-```  
-npm install  
-npm run dev  
-```  
+```
+npm install
+npm run dev
+```
 6. Copy then rename .env.example to .env
-```  
-copy .env.example .env  
-```  
+```
+copy .env.example .env
+```
 7. Generate application key
-```  
-php artisan key:generate  
+```
+php artisan key:generate
 ```
 8. Create symbolic links
 ```
