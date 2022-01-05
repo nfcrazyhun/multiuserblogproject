@@ -14,6 +14,10 @@ yarn-error.log
 /.idea
 /.vscode
 
+#ignore ide helper files
+_ide_helper.php
+_ide_helper_models.php
+
 #keep default images
 !/storage/app/avatars/default-avatar.png
 !/storage/app/thumbnails/default-thumbnail.jpg
