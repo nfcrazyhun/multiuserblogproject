@@ -100,4 +100,9 @@ And conditionally included form CDNs:
 - Pikaday - for date picker
 - FilePond - for image upload
 
+## Roadmap
+- page where super admin can see and modify all users posts
+- comment section
+- messaging system between users
+
 ## Screenshots
