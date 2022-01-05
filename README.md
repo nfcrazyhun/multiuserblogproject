@@ -71,7 +71,7 @@ php artisan key:generate
 ```
 php artisan storage:link
 ```
-9. Create a database
+9. Create a database. (collation: utf8mb4_unicode_ci)
 
 10. Update database credentials in the .env
 
