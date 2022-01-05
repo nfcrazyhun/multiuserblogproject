@@ -106,12 +106,10 @@ And conditionally included form CDNs:
 - messaging system between users
 
 ## Screenshots
-## Screenshots
 ![1-home-page-min](https://user-images.githubusercontent.com/47859399/148252688-796f2874-e1c2-4053-97b5-27f3fa45a72f.png)
 ![3-post-show-min](https://user-images.githubusercontent.com/47859399/148252711-570542a9-200f-4d1f-a007-b4e9cd2b1c57.png)
 
-<img src="https://user-images.githubusercontent.com/47859399/148252703-be4b76ee-493c-4102-8220-e1b1d4187f83.png" alt="2-home-page-responsive-min" width="400"/>
-<img src="https://user-images.githubusercontent.com/47859399/148258406-f947f06f-19dc-449c-b96d-002605f0716d.png" alt="5-hamburger-menu-min" width="400"/>
+<img src="https://user-images.githubusercontent.com/47859399/148252703-be4b76ee-493c-4102-8220-e1b1d4187f83.png" alt="2-home-page-responsive-min" width="400"/> <img src="https://user-images.githubusercontent.com/47859399/148258406-f947f06f-19dc-449c-b96d-002605f0716d.png" alt="5-hamburger-menu-min" width="400"/>
 
 ![6-admin-posts-index-min](https://user-images.githubusercontent.com/47859399/148252732-a6021d27-7094-45e9-8d26-eb8f9c604ae5.png)
 ![7-admin-posts-advanced-search-min](https://user-images.githubusercontent.com/47859399/148252746-397ec035-ef03-45bb-8d47-4cf37918ac2f.png)
