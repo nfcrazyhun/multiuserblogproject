@@ -111,7 +111,7 @@ And conditionally included form CDNs:
 
 <img src="https://user-images.githubusercontent.com/47859399/148252703-be4b76ee-493c-4102-8220-e1b1d4187f83.png" alt="2-home-page-responsive-min" width="400"/> <img src="https://user-images.githubusercontent.com/47859399/148258406-f947f06f-19dc-449c-b96d-002605f0716d.png" alt="5-hamburger-menu-min" width="400"/>
 
-![6-admin-posts-index-min](https://user-images.githubusercontent.com/47859399/148252732-a6021d27-7094-45e9-8d26-eb8f9c604ae5.png)
+![6-admin-posts-index](https://user-images.githubusercontent.com/47859399/148261156-436d5691-a07e-40be-8d62-3b5adcbfd644.png)
 ![7-admin-posts-advanced-search-min](https://user-images.githubusercontent.com/47859399/148252746-397ec035-ef03-45bb-8d47-4cf37918ac2f.png)
 ![8-admin-edit-post-min](https://user-images.githubusercontent.com/47859399/148252759-f416d3d8-3565-4df9-b9a7-115ffa8da88b.png)
 ![9-admin-delete-post-min](https://user-images.githubusercontent.com/47859399/148252768-39d60a7e-1d0a-47e3-af12-df24c19b01c0.png)
