@@ -18,10 +18,12 @@ yarn-error.log
 _ide_helper.php
 _ide_helper_models.php
 
+#remove uploaded files
+/public/avatars
+/public/thumbnails
+/storage/app/avatars/*
+/storage/app/thumbnails/*
+
 #keep default images
 !/storage/app/avatars/default-avatar.png
 !/storage/app/thumbnails/default-thumbnail.jpg
-
-#remove everything else
-/storage/app/avatars/
-/storage/app/thumbnails/
