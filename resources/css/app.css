@@ -1,0 +1,29 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+[x-cloak] {
+    display: none !important;
+}
+
+/* Colors:
+* https://tailwindcss.com/docs/customizing-colors
+* https://www.figma.com/community/file/1052275876271758307
+*/
+@layer components {
+    .btn-draft {
+        @apply bg-gray-100 text-gray-800 border border-gray-500
+    }
+    .btn-pending {
+        @apply bg-yellow-100 text-yellow-800 border border-yellow-500
+    }
+    .btn-published {
+        @apply bg-green-100 text-green-800 border border-green-500
+    }
+    .btn-archived {
+        @apply bg-indigo-100 text-indigo-800 border border-indigo-500
+    }
+    .btn-unknown {
+        @apply bg-fuchsia-100 text-fuchsia-800 border border-fuchsia-500
+    }
+}

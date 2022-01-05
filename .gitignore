@@ -1,0 +1,23 @@
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+
+#keep default images
+!/storage/app/avatars/default-avatar.png
+!/storage/app/thumbnails/default-thumbnail.jpg
+
+#remove everything else
+/storage/app/avatars/
+/storage/app/thumbnails/
