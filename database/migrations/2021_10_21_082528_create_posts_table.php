@@ -24,6 +24,8 @@ class CreatePostsTable extends Migration
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
+
+            $table->unique(['user_id','slug']);
         });
     }
 
