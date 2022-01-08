@@ -18,7 +18,7 @@
                                 id="filter-search"
                             />
                             <!-- dirty trick to load x-input.date javascript before Alpine.js initialize to avoid errors -->
-                            <div style="display: none"><x-input.date /></div>
+                            <div style="display: none"><x-input.date wire:model="filters.created_at-min" /></div>
                         </div>
                         <!-- + New button -->
                         <div>
