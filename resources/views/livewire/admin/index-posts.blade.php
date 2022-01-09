@@ -1,5 +1,12 @@
 <div>
-    <x-slot name="header">{{ __('My Posts') }}</x-slot>
+    @php($atSuperAdmin = request()->routeIs('superadmin.*'))
+    <x-slot name="header">
+        @if($atSuperAdmin)
+            {{ __('Superadmin: Posts') }}
+        @else
+            {{ __('My Posts') }}
+        @endif
+    </x-slot>
 
     <div class="space-y-4">
         <div>

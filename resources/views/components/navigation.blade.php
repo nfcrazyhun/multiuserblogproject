@@ -17,19 +17,25 @@
                         </x-nav-link>
 
                         @auth
-                        <x-nav-link :href="route('user.posts.index', [auth()->user()] )" :active="request()->routeIs('home.user.posts.show')">
-                            {{ __('My Blog') }}
-                        </x-nav-link>
+                            <x-nav-link :href="route('user.posts.index', [auth()->user()] )" :active="request()->routeIs('home.user.posts.show')">
+                                {{ __('My Blog') }}
+                            </x-nav-link>
 
-                        <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
-                            {{ __('Dashboard') }}
-                        </x-nav-link>
+                            <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
+                                {{ __('Dashboard') }}
+                            </x-nav-link>
 
-                        <x-nav-link :href="route('admin.posts.index')" :active="request()->routeIs('admin.posts.*')">
-                            {{ __('My Posts') }}
-                        </x-nav-link>
+                            <x-nav-link :href="route('admin.posts.index')" :active="request()->routeIs('admin.posts.*')">
+                                {{ __('My Posts') }}
+                            </x-nav-link>
+
+                            @can('superadmin')
+                                <x-nav-link :href="route('superadmin.posts.index')" :active="request()->routeIs('superadmin.posts.*')">
+                                    {{ __('SA: Posts') }}
+                                </x-nav-link>
+                            @endcan
                         @else
-                            <!-- guest menu ites -->
+                            <!-- guest menu items -->
                         @endauth
                     </div>
                 </div>
@@ -114,6 +120,12 @@
                 <x-responsive-nav-link :href="route('admin.posts.index')" :active="request()->routeIs('admin.posts.*')">
                     {{ __('My Posts') }}
                 </x-responsive-nav-link>
+
+                @can('superadmin')
+                    <x-responsive-nav-link :href="route('superadmin.posts.index')" :active="request()->routeIs('superadmin.posts.*')">
+                        {{ __('SA: Posts') }}
+                    </x-responsive-nav-link>
+                @endcan
             @endauth
 
         </div>

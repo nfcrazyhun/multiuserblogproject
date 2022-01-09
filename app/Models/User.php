@@ -48,6 +48,14 @@ class User extends Authenticatable
     ];
 
     /**
+     * Custom methods
+     */
+    public function isSuperAdmin() :bool
+    {
+        return $this->is_admin === true;
+    }
+
+    /**
      * Custom accessors
      * https://laravel.com/docs/8.x/eloquent-mutators#accessors-and-mutators
      * https://laravel.com/docs/8.x/eloquent-serialization#appending-values-to-json

@@ -18,9 +18,9 @@ class IndexPosts extends Component
 {
     use WithPagination, WithFileUploads;
 
-
     public $pageSize = 9;
 
+    //Sorting
     public $sortField = 'id';
     public $sortDirection = 'desc';
 
@@ -34,6 +34,7 @@ class IndexPosts extends Component
         'published_at-min' => null,
         'published_at-max' => null,
         'status' => null,
+        'username' => null,
     ];
 
     public $showEditModal = false;
@@ -43,16 +44,24 @@ class IndexPosts extends Component
     public $upload = null;
     public $maxfilesize = 2048; //KB
 
+    protected function source()
+    {
+        return auth()->user()->posts();
+    }
+
     protected $queryString = [
         'sortField',
         'sortDirection',
         'search' => ['except' => ''],
         ];
 
-    protected function rules()
+    protected function rules(): array
     {
         return [
-            'editing.user_id' => ['required', Rule::exists('users','id'), Rule::in( auth()->id() )],
+            'editing.user_id' => ['required',
+                Rule::exists('users','id'),
+                auth()->user()->isSuperAdmin() ? '' : Rule::in(auth()->id()),
+            ],
             'editing.title' => 'required|max:255',
             'editing.slug' => ['required', 'max:255', Rule::unique('posts', 'slug')->ignore($this->editing)
                 ->where(function (QueryBuilder $query) {
@@ -133,7 +142,7 @@ class IndexPosts extends Component
 
     public function edit($id)
     {
-        $post = auth()->user()->posts()->withTrashed()->find($id);
+        $post = $this->source()->withTrashed()->find($id);
 
         if ( is_null($post) ) { return(false); } //fail gracefully
 
@@ -194,8 +203,7 @@ class IndexPosts extends Component
 
     public function render()
     {
-
-        $posts = auth()->user()->posts()
+        $posts = $this->source()
             // categories name
             ->when(str_contains($this->sortField,'categories.'), function (EloquentBuilder $query) {
                 $query->join('categories','posts.category_id', '=', 'categories.id');

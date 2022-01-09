@@ -40,6 +40,17 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group( function () 
 
     //My Posts
     Route::get('/posts', \App\Http\Livewire\Admin\IndexPosts::class)->name('posts.index');
+
+});
+
+/**
+ * Superadmin section
+ */
+Route::prefix('/superadmin')->name('superadmin.')->middleware('auth')->group( function () {
+    Route::get('/', function () { return redirect()->route('superadmin.posts.index'); });
+
+    //All Posts
+    Route::get('/posts', \App\Http\Livewire\Admin\SuperAdminPosts::class)->name('posts.index');
 });
 
 Route::middleware('auth')->group( function () {
