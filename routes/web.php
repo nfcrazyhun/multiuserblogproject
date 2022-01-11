@@ -43,19 +43,20 @@ Route::prefix('/admin')->name('admin.')->middleware('auth')->group( function () 
 
 });
 
+Route::middleware('auth')->group( function () {
+    //Profile
+    Route::get('profile', \App\Http\Livewire\Profile::class)->name('profile.edit');
+});
+
+
 /**
  * Superadmin section
  */
-Route::prefix('/superadmin')->name('superadmin.')->middleware('auth')->group( function () {
+Route::prefix('/superadmin')->name('superadmin.')->middleware(['auth', 'superadmin'])->group( function () {
     Route::get('/', function () { return redirect()->route('superadmin.posts.index'); });
 
     //All Posts
     Route::get('/posts', \App\Http\Livewire\Admin\SuperAdminPosts::class)->name('posts.index');
-});
-
-Route::middleware('auth')->group( function () {
-    //Profile
-    Route::get('profile', \App\Http\Livewire\Profile::class)->name('profile.edit');
 });
 
 //--------------------------------------------------------------------------
